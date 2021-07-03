@@ -1,0 +1,32 @@
+Ciuculan Maria-Cristiana
+323CC
+Tema 2
+
+Problema 1
+
+	Pentru prima problema am ales o rezolvare cu ajutorul algoritmului BFS aplicat unei
+matrici. Incep rezolvarea cu citirea inputului si crearea matricei pe care o bordez cu litera
+"P" marcand zona de pamant unde trebuie sa ajungem. In acelasi timp, creez o matrice visited
+pe care o initializez cu false. Am creat o clasa interna pentru a reprezenta perechea x-y si
+distanta pana la ea.
+	Creez un element de tip Pair in care adaug pozitia de inceput cu distanta initiala 0.
+adaug in queue, marchez ca vizitat si urmaresc algoritmul.
+	Salvez primul element intr-o variabila interna si o elimin din q. Daca gasesc pe pozitia
+noua "P" atunci ma pot opri si returnez distanta. altfel, verific unde ma aflu:
+	Daca sunt pe o casuta marcata cu "O" atunci verific in stanga si in dreapta validitatea
+locatiei noi. La fel pentru verticala si pentru casuta marcata cu "D" unde trebuie facute toate
+verificarile de la cele 2 cazuri anterioare.
+	Validitatea unei casute este data de:
+	1. faptul ca se afla in interiorul cadranului
+	2. faptul ca nu a mai fost vizitata
+	3. faptul ca nu este reprezentata de un "."
+	In final, daca reuseste sa se finalizeze while-ul, inseamna ca nu a fost gasit un drum,
+motiv pentru care returnez -1.
+
+Problema 3
+
+	La problema 3 aplic metoda Backtracking. Prima functie este cea care aplica algoritmul
+recursiv asupra tuturor elementelor din domeniu. Daca sunt la prima iteratie pornesc de la primul
+element, altfel pornesc de la al doilea de dupa pasul anterior. Daca ajung la ultima iteratie,
+verific validitatea solutiei. Astfel se genereaza toate posibilitatile.
+	Iterez prin sumele generate si caut elementele pentru suma minima.
